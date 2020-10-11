@@ -13,8 +13,9 @@ public class Mainclass {
  
 @SuppressWarnings("unchecked")
 public static void main(String[] args) throws Exception {
-Food[] breakfast = new Food[20];
-for(int i=0;i<20;i++){
+    final int size=10;
+Food[] breakfast = new Food[size];
+for(int i=0;i<size;i++){
 int key=(int)(Math.random()*3);
 switch(key){
     case 0:{
@@ -53,7 +54,8 @@ Cake CHOCO = new Cake("Шоколадная");
 Cake CREAMY = new Cake("Сливочная");
 Cake CARAMEL = new Cake("Карамельная");
 int choco=0,creamy=0,caramel=0;
-for(int i=0;i<20;i++){
+for(int i=0;i<size;i++){
+    System.out.println(breakfast[i]);
     if(breakfast[i] instanceof Cake){
         
         if(breakfast[i].equals(CHOCO)) {choco++;
@@ -61,9 +63,10 @@ for(int i=0;i<20;i++){
         if(breakfast[i].equals(CREAMY)) {creamy++;
         continue;}
         if(breakfast[i].equals(CARAMEL)) {caramel++;
-        continue;}
+        }
     }
     }
+System.out.println("_______________________________");
 System.out.println("Шоколадных " + choco + ",Сливочных " + creamy + ",Карамельных " + caramel);
 }
 }
