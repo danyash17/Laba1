@@ -49,9 +49,22 @@ switch(key){
     }
 }
 }
+Cake CHOCO = new Cake("Шоколадная");
+Cake CREAMY = new Cake("Сливочная");
+Cake CARAMEL = new Cake("Карамельная");
+int choco=0,creamy=0,caramel=0;
 for(int i=0;i<20;i++){
-    System.out.println(breakfast[i]);
-}
+    if(breakfast[i] instanceof Cake){
+        
+        if(breakfast[i].equals(CHOCO)) {choco++;
+        continue;}
+        if(breakfast[i].equals(CREAMY)) {creamy++;
+        continue;}
+        if(breakfast[i].equals(CARAMEL)) {caramel++;
+        continue;}
+    }
+    }
+System.out.println("Шоколадных " + choco + ",Сливочных " + creamy + ",Карамельных " + caramel);
 }
 }
  
