@@ -32,7 +32,7 @@ return size.equals(((Apple)arg0).size); // Шаг 3
 return false;
 }
 public String toString() {
-return super.toString() + " размера '" + size.toUpperCase() + "'";
+return super.toString() + " размера "  + this.size;
 }
 
 }

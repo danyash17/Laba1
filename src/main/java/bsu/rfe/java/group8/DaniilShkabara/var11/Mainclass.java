@@ -14,29 +14,44 @@ public class Mainclass {
 @SuppressWarnings("unchecked")
 public static void main(String[] args) throws Exception {
 Food[] breakfast = new Food[20];
-int itemsSoFar = 0;
-for (String arg: args) {
-//String[] parts = arg.split("/");
-//if (parts[0].equals("Cheese")) {
-//breakfast[itemsSoFar] = new Cheese();
-//} else
-//if (parts[0].equals("Apple")) {
-//breakfast[itemsSoFar] = new Apple(parts[1]);
-//}
-//if(parts[0].equals("Cake")){
-//    breakfast[itemsSoFar]=new Cake(parts[2]);
-//} 
-
-itemsSoFar++;
+for(int i=0;i<20;i++){
+int key=(int)(Math.random()*3);
+switch(key){
+    case 0:{
+        breakfast[i]=new Cheese();
+        break;
+    }
+    case 1:{
+        int key_param_apple=(int)(Math.random()*2);
+        if(key_param_apple==0){
+        breakfast[i]=new Apple("Большое");
+        }
+        else
+        breakfast[i]=new Apple("Маленькое");
+        break;
+    }
+    case 2:{
+        int key_param_cake=(int)(Math.random()*3);
+        switch (key_param_cake){
+            case 0:{
+                breakfast[i]=new Cake("Шоколадная");
+                break;
+            }
+            case 1:{
+                breakfast[i]=new Cake("Сливочная");
+                break;
+            }
+            case 2:{
+                breakfast[i]=new Cake("Карамельная");
+                break;
+            }
+        }
+    }
 }
-for (Food item: breakfast){
-if (item!=null)
-item.consume();
-else{
-break;
 }
+for(int i=0;i<20;i++){
+    System.out.println(breakfast[i]);
 }
-System.out.println("Всего хорошего!");
 }
 }
  

@@ -32,7 +32,7 @@ return icing.equals(((Cake)arg0).icing); // Шаг 3
 return false;
 }
 public String toString() {
-return super.toString() + " с '" + icing.toUpperCase() + "глазурью";
+return super.toString()  + ' ' + this.icing+ " глазурь";
 }
 
 }
