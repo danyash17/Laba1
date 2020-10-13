@@ -9,12 +9,14 @@ package bsu.rfe.java.group8.DaniilShkabara.var11;
  *
  * @author Даня
  */
-public class Cheese extends Food {
+public class Cheese extends Food implements Nutritious {
     public Cheese() {
 super("Сыр");
 }
 public void consume() {
 System.out.println(this + " съеден");
 }
-
+public double calculate_calories(){
+    return 300;
+    }
 }

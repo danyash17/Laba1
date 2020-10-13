@@ -9,7 +9,7 @@ package bsu.rfe.java.group8.DaniilShkabara.var11;
  *
  * @author Даня
  */
-public class Apple extends Food {
+public class Apple extends Food implements Nutritious {
     private String size;
     public Apple(String size) {
 super("Яблоко");
@@ -34,5 +34,10 @@ return false;
 public String toString() {
 return super.toString() + " размера "  + this.size;
 }
-
+public double calculate_calories(){
+    if (this.size=="Большое"){
+        return 60;
+    }
+    else return 50;
+    }
 }

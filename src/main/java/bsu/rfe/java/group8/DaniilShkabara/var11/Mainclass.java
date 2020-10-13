@@ -9,7 +9,7 @@ package bsu.rfe.java.group8.DaniilShkabara.var11;
  *
  * @author Даня
  */
-public class Mainclass {
+public class Mainclass{
  
 @SuppressWarnings("unchecked")
 public static void main(String[] args) throws Exception {
@@ -53,6 +53,8 @@ switch(key){
 Cake CHOCO = new Cake("Шоколадная");
 Cake CREAMY = new Cake("Сливочная");
 Cake CARAMEL = new Cake("Карамельная");
+System.out.println("Калорийности пирожных: \nШоколадное " + CHOCO.calculate_calories() + "\nСливочное " + CREAMY.calculate_calories() + "\nКарамельное " + CARAMEL.calculate_calories());
+System.out.println("_______________________________");
 int choco=0,creamy=0,caramel=0;
 for(int i=0;i<size;i++){
     System.out.println(breakfast[i]);

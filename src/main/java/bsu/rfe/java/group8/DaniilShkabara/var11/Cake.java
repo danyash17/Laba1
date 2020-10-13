@@ -9,7 +9,7 @@ package bsu.rfe.java.group8.DaniilShkabara.var11;
  *
  * @author Даня
  */
-public class Cake extends Food {
+public class Cake extends Food implements Nutritious {
     private String icing;
 public Cake(String icing) {
     super("Пирожное");
@@ -34,6 +34,16 @@ return false;
 public String toString() {
 return super.toString()  + ' ' + this.icing+ " глазурь";
 }
-
+public double calculate_calories(){
+    switch(this.icing){
+        case "Шоколадная":
+            return 380;
+        case "Сливочная":
+            return 360;
+        case "Карамельная":
+            return 350;
+        default: return 320;
+    }
+}
 }
 
