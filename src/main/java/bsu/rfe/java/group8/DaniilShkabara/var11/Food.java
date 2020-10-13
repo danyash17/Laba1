@@ -9,7 +9,7 @@ package bsu.rfe.java.group8.DaniilShkabara.var11;
  *
  * @author Даня
  */
-public abstract class Food implements Consumable {
+public abstract class Food implements Consumable,Nutritious {
 String name = null;
 public Food(String name) {
 this.name = name;
@@ -28,4 +28,15 @@ return name;
 public void setName(String name) {
 this.name = name;
 }
+public double calculate_calories(String key,Food[] arr,int count){
+    double sum=0;
+if(key=="-calories"){
+    for(int i=count;i<arr.length;i++){
+    sum+=arr[i].calculate_calories();
+    }
+    return sum;
 }
+else return sum;
+}
+}
+

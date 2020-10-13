@@ -70,6 +70,8 @@ for(int i=0;i<size;i++){
     }
 System.out.println("_______________________________");
 System.out.println("Шоколадных " + choco + ",Сливочных " + creamy + ",Карамельных " + caramel);
+int count=0;
+System.out.println("Калорийность всего завтрака " + breakfast[count].calculate_calories("-calories", breakfast,count));
 }
 }
  
